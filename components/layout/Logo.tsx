@@ -1,3 +1,4 @@
+import { Hexagon } from "lucide-react";
 import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
@@ -6,16 +7,19 @@ export function Logo({ className }: { className?: string }) {
     <a
       href="#"
       className={cn(
-        "group inline-flex items-center gap-2.5 focus-ring rounded-md",
+        "group inline-flex items-center gap-2 sm:gap-3 focus-ring rounded-md",
         className
       )}
       aria-label={`${site.name} home`}
     >
-      <span className="relative flex h-7 w-7 items-center justify-center overflow-hidden rounded-md border border-white/15 bg-white/5">
-        <span className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
-        <span className="relative h-2 w-2 rounded-[2px] bg-accent shadow-[0_0_12px_rgba(198,242,78,0.7)]" />
+      <span className="relative inline-flex items-center justify-center">
+        <Hexagon
+          className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500 fill-blue-500/20"
+          strokeWidth={2}
+        />
+        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-blue-500" />
       </span>
-      <span className="text-[15px] font-medium tracking-tight text-bone">
+      <span className="text-lg sm:text-xl font-bold tracking-[0.2em] text-white">
         {site.name}
       </span>
     </a>

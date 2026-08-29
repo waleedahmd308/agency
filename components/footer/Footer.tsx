@@ -16,8 +16,8 @@ export function Footer() {
       <div className="container-x py-16 md:py-20">
         {/* Big CTA line */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 pb-16 border-b border-white/[0.06]">
-          <h2 className="font-display text-4xl md:text-6xl text-bone leading-[1.02] max-w-2xl">
-            Digital products <span className="italic text-mist-400">engineered</span> for businesses that want to move forward.
+          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight text-white leading-[1.05] max-w-2xl">
+            Build products that <span className="text-[#0a6cff]">move</span> your business forward.
           </h2>
           <a href="#contact" className="btn-primary self-start focus-ring">
             Start a Project
@@ -119,7 +119,7 @@ export function Footer() {
         className="pointer-events-none select-none overflow-hidden"
       >
         <div className="container-x">
-          <div className="mt-2 md:mt-4 pb-6 md:pb-10 text-center font-display text-[22vw] md:text-[16vw] leading-[0.85] text-bone/[0.04]">
+          <div className="mt-2 md:mt-4 pb-6 md:pb-10 text-center font-black uppercase tracking-[0.02em] text-[22vw] md:text-[16vw] leading-[0.85] text-white/[0.04]">
             {site.name}
           </div>
         </div>

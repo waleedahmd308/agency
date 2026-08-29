@@ -4,7 +4,6 @@
 
 :root {
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Instrument Serif", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
@@ -15,28 +14,35 @@
 
 html {
   scroll-behavior: smooth;
-  background: #050506;
+  background: #020617;
 }
 
 body {
-  background: #050506;
-  color: #F5F4EF;
+  background: #020617;
+  color: #ffffff;
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
+/* NextGen display treatment — any heading tagged font-display gets bold, tight tracking */
+.font-display {
+  font-weight: 800;
+  letter-spacing: -0.028em;
+  line-height: 1.05;
+}
+
 ::selection {
-  background: #C6F24E;
-  color: #0A0A0B;
+  background: #0a6cff;
+  color: #ffffff;
 }
 
 @layer utilities {
   .container-x {
-    @apply mx-auto w-full max-w-container px-6 md:px-10 lg:px-14;
+    @apply mx-auto w-full max-w-container px-4 sm:px-6 lg:px-14;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-mist-400 font-medium;
+    @apply inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-mist-400 font-bold;
   }
 
   .hairline {
@@ -45,34 +51,21 @@ body {
 
   .grid-lines {
     background-image:
-      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
-  .noise {
-    position: relative;
-  }
-  .noise::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.035;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  }
-
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bone text-ink px-6 py-3 text-sm font-medium transition-all duration-300 ease-premium hover:bg-white hover:-translate-y-[1px] active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#0a6cff] text-white px-6 py-3 text-sm font-bold tracking-widest uppercase shadow-glow transition-all duration-300 ease-premium hover:bg-blue-600 hover:shadow-glow-lg;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 text-bone px-6 py-3 text-sm font-medium transition-all duration-300 ease-premium hover:border-white/40 hover:bg-white/5;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-blue-600 bg-[#0a1128]/50 text-white px-6 py-3 text-sm font-bold tracking-widest uppercase transition-all duration-300 ease-premium hover:bg-blue-600/20;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 text-sm font-medium text-bone/80 hover:text-bone transition-colors;
+    @apply inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white/80 hover:text-white transition-colors;
   }
 
   .card {
@@ -80,7 +73,7 @@ body {
   }
 
   .card-hover:hover {
-    @apply border-white/20 bg-white/[0.035];
+    @apply border-blue-500/40 bg-white/[0.04];
   }
 
   .focus-ring:focus-visible {
@@ -106,12 +99,12 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #050506;
+  background: #020617;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1C1C1F;
+  background: #0F1A33;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2A2A2E;
+  background: #182541;
 }
